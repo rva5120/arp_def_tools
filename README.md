@@ -63,6 +63,8 @@ git clone https://github.com/rva5120/arp_def_tools
 These solutions assume that the user's ethernet interface is 'en0'. If this is not the case, please change the variable eth_interface accordingly.
 
 ### Running ICMP Secondary Cache [1]
+This implementation requires the user to manually enter the current ARP Table at the time of starting the program. Please go to the file "icmp_sec_cache.py", and populate the icmp_cache mapping structure. Feel free to add more mappings aside from the default provided on the script.
+
 To run the code, execute the following command and enter your admin password:
 ```
 sudo python icmp_sec_cache.py
