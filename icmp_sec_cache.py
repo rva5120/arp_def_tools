@@ -58,14 +58,14 @@ def arp_reply_intercept_sec_cache(pkt):
 # Setup Secondary Cache
 # Set IP-MAC bindings from current ARP cache table
 print "Setting up Secondary Cache..."
-router_ip = '10.0.0.1'
-router_mac = '00:50:f1:80:00:00'
+router_ip = ''
+router_mac = ''
 
-victim_ip = '10.0.0.150'
-victim_mac = '78:31:C1:C1:3B:72'
+victim_ip = ''
+victim_mac = ''
 
-attacker_ip = '10.0.0.109'
-attacker_mac = '80:E6:50:0C:F7:C4'
+attacker_ip = ''
+attacker_mac = ''
 
 icmp_cache = dict(zip([router_mac,attacker_mac,victim_mac], [router_ip,attacker_ip,victim_ip]))
 
