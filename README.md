@@ -27,12 +27,26 @@ Inside of your virtual environment, run the following command:
 $ pip install scapy
 ```
 
+Install Scapy's dependencies to avoid import errors (https://stackoverflow.com/questions/40272077/importerror-no-module-named-dumbnet-when-trying-to-run-a-script-that-leverage)
+```
+cd
+git clone https://github.com/dugsong/libdnet.git
+cd libdnet
+./configure && make
+cd python
+python setup.py install
+```
+
 Test your setup:
 ```
 $ source ~/Documents/arp_defenses/bin/activate
 $ sudo scapy
 ```
-This should start up scapy on your terminal.
+Or
+```
+$ python
+>>> from scapy.all import *
+```
 
 To exit the virtual environment:
 ```
@@ -45,15 +59,19 @@ To get the code for these solutions, create a folder where you would like to sto
 git clone https://github.com/rva5120/arp_def_tools
 ```
 
-## Running ICMP Secondary Cache [1]
+## Running the defenses
+These solutions assume that the user's ethernet interface is 'en0'. If this is not the case, please change the variable eth_interface accordingly.
 
+# Running ICMP Secondary Cache [1]
+To run the code, execute the following command and enter your admin password:
+```
+sudo python icmp_sec_cache.py
+```
 
 ## Running E-SDE Solution [2]
-The E-SDE solution assumes that the user's ethernet interface is 'en0'. If this is not the case, please change the variable eth_interface accordingly.
-
 To run the code, execute the following command and enter your admin password:
 ```
 sudo python e_sde.py
 ```
 
-The program will alert you if an attack is happening.
+The programs will alert you if an attack is happening.
