@@ -62,13 +62,13 @@ git clone https://github.com/rva5120/arp_def_tools
 ## Running the defenses
 These solutions assume that the user's ethernet interface is 'en0'. If this is not the case, please change the variable eth_interface accordingly.
 
-# Running ICMP Secondary Cache [1]
+### Running ICMP Secondary Cache [1]
 To run the code, execute the following command and enter your admin password:
 ```
 sudo python icmp_sec_cache.py
 ```
 
-## Running E-SDE Solution [2]
+### Running E-SDE Solution [2]
 To run the code, execute the following command and enter your admin password:
 ```
 sudo python e_sde.py
